@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عزل أسطح وخزانات – الرياض</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+  var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+  ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    ttq.load('D88HEQBC77UANKFS0830');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #25D366;
+      --green-dark: #128C7E;
+      --blue: #0066CC;
+      --blue-dark: #004999;
+      --red: #C0392B;
+      --red-light: #e74c3c;
+      --gold: #F5B800;
+      --gold-dark: #C9970A;
+      --bg: #fff5f5;
+      --card-bg: #ffffff;
+      --text: #1a1a2e;
+      --muted: #5a6482;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 12px 80px;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(192, 57, 43, 0.07) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(245, 184, 0, 0.09) 0%, transparent 50%);
+    }
+
+    /* ───── Floating Buttons ───── */
+    .floating-btns {
+      position: fixed;
+      left: 16px;
+      bottom: 90px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .fab {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .fab:active { transform: scale(0.93); }
+    .fab-whatsapp { background: var(--green); }
+    .fab-call     { background: var(--blue); }
+    .fab svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ───── Card ───── */
+    .card {
+      width: 100%;
+      max-width: 460px;
+      background: var(--card-bg);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(192, 57, 43, 0.15);
+    }
+
+    /* ─── Header ─── */
+    .card-header {
+      background: linear-gradient(135deg, #8B0000 0%, #C0392B 55%, #e74c3c 100%);
+      padding: 28px 24px 22px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    }
+
+    .badge-hot {
+      display: inline-block;
+      background: var(--gold);
+      color: #333;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .card-header h1 {
+      color: #fff;
+      font-size: clamp(22px, 6vw, 30px);
+      font-weight: 900;
+      line-height: 1.35;
+      position: relative;
+    }
+
+    .card-header h1 span { color: var(--gold); }
+
+    .city-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-top: 10px;
+      backdrop-filter: blur(6px);
+    }
+
+    /* ─── Price Banner ─── */
+    .price-banner {
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+      text-align: center;
+      padding: 12px 20px;
+    }
+
+    .price-banner p {
+      color: #1a1a00;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .price-banner .price {
+      font-size: clamp(18px, 5vw, 24px);
+      font-weight: 900;
+      color: var(--red);
+    }
+
+    /* ─── Body ─── */
+    .card-body { padding: 22px 20px; }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 18px;
+      background: var(--gold);
+      border-radius: 4px;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .service-item {
+      background: linear-gradient(135deg, #fff5f5, #ffe8e8);
+      border: 1px solid #ffd0d0;
+      border-radius: 12px;
+      padding: 11px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .service-item .icon { font-size: 18px; flex-shrink: 0; }
+
+    /* Features */
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 24px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .check-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .check-icon svg { width: 12px; height: 12px; fill: #fff; }
+
+    /* CTA */
+    .cta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 10px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-family: 'Cairo', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    }
+
+    .btn:active { transform: scale(0.96); }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #fff;
+    }
+
+    .btn-call {
+      background: linear-gradient(135deg, #C0392B, #8B0000);
+      color: #fff;
+    }
+
+    .btn svg { width: 20px; height: 20px; fill: #fff; flex-shrink: 0; }
+
+    /* Footer */
+    .card-footer {
+      background: #fff8f8;
+      border-top: 1px solid #ffd0d0;
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    .footer-phone {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--red);
+      letter-spacing: 1px;
+      direction: ltr;
+    }
+
+    .footer-note {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Credits */
+    .credits {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .credits a {
+      color: var(--green-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .credits a:hover { text-decoration: underline; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #ffd0d0, transparent);
+      margin: 18px 0;
+    }
+
+    @media (max-width: 360px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .cta-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Buttons -->
+  <div class="floating-btns">
+    <a href="https://wa.me/966539676843" class="fab fab-whatsapp" title="واتساب">
+      <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.18 1.6 6L0 24l6.2-1.57A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.22-3.48-8.52zm-8.52 18.4a9.9 9.9 0 0 1-5.06-1.38l-.36-.21-3.68.93.97-3.58-.24-.37A9.9 9.9 0 0 1 2.1 12c0-5.47 4.43-9.9 9.9-9.9 2.64 0 5.12 1.03 6.99 2.9a9.85 9.85 0 0 1 2.91 6.98c0 5.47-4.43 9.9-9.9 9.9zm5.44-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.06 2.88 1.21 3.08c.15.2 2.09 3.19 5.07 4.47.71.31 1.26.49 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+    </a>
+    <a href="tel:0539676843" class="fab fab-call" title="اتصال">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57A1 1 0 0 1 21 16.5v3.49A1 1 0 0 1 20 21C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5A1 1 0 0 1 8.5 4c0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/></svg>
+    </a>
+  </div>
+
+  <!-- Main Card -->
+  <div class="card">
+
+    <!-- Header -->
+    <div class="card-header">
+      <div class="badge-hot">⚡ خدمة متخصصة في الرياض</div>
+      <h1>عزل <span>أسطح</span> وخزانات<br/>بأعلى جودة</h1>
+      <div class="city-tag">📍 مدينة الرياض – جميع الأحياء</div>
+    </div>
+
+    <!-- Price Banner -->
+    <div class="price-banner">
+      <p>عروض حصرية لا تُفوَّت</p>
+      <p class="price">اتصل الآن للحصول على أفضل سعر 🔥</p>
+    </div>
+
+    <!-- Body -->
+    <div class="card-body">
+
+      <!-- Services -->
+      <div class="section-title">خدماتنا المتخصصة</div>
+      <div class="services-grid">
+        <div class="service-item"><span class="icon">🏠</span> عزل الأسطح</div>
+        <div class="service-item"><span class="icon">💧</span> عزل خزانات المياه</div>
+        <div class="service-item"><span class="icon">🌡️</span> عزل حراري فوم</div>
+        <div class="service-item"><span class="icon">🧱</span> عزل مائي شامل</div>
+        <div class="service-item"><span class="icon">🔧</span> صيانة وإصلاح التسريب</div>
+        <div class="service-item"><span class="icon">🌬️</span> بولي يوريثان عازل</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Features -->
+      <div class="section-title">لماذا تختارنا؟</div>
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          خبرة أكثر من 10 سنوات في الرياض
+        </div>
+        <div class="feature-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          مواد عالية الجودة ومعتمدة
+        </div>
+        <div class="feature-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          ضمان على جميع الأعمال
+        </div>
+        <div class="feature-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          تغطية كاملة لجميع أحياء الرياض
+        </div>
+        <div class="feature-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          فريق متخصص ومعدات حديثة
+        </div>
+        <div class="feature-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          معاينة مجانية وأسعار تنافسية
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- CTA -->
+      <div class="cta-row">
+        <a href="https://wa.me/966539676843" class="btn btn-whatsapp">
+          <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.18 1.6 6L0 24l6.2-1.57A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.22-3.48-8.52zm-8.52 18.4a9.9 9.9 0 0 1-5.06-1.38l-.36-.21-3.68.93.97-3.58-.24-.37A9.9 9.9 0 0 1 2.1 12c0-5.47 4.43-9.9 9.9-9.9 2.64 0 5.12 1.03 6.99 2.9a9.85 9.85 0 0 1 2.91 6.98c0 5.47-4.43 9.9-9.9 9.9zm5.44-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.06 2.88 1.21 3.08c.15.2 2.09 3.19 5.07 4.47.71.31 1.26.49 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.69.25-1.28.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+          واتساب
+        </a>
+        <a href="tel:0539676843" class="btn btn-call">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57A1 1 0 0 1 21 16.5v3.49A1 1 0 0 1 20 21C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5A1 1 0 0 1 8.5 4c0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/></svg>
+          اتصل الآن
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer">
+      <div class="footer-phone">0539676843</div>
+      <div class="footer-note">متاح يومياً – جميع أحياء الرياض 📍</div>
+    </div>
+
+  </div>
+
+  <!-- Credits -->
+  <div class="credits">
+    تم التصميم بواسطة
+    <a href="https://wa.me/201029095046" target="_blank" rel="noopener">م. نجوي إبراهيم</a>
+    <br/>
+    جميع الحقوق محفوظة © 2025
+  </div>
+
+  <script>
+    document.querySelectorAll('.fab').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        this.style.transform = 'scale(0.88)';
+        var self = this;
+        setTimeout(function() { self.style.transform = ''; }, 200);
+      });
+    });
+  </script>
+
+</body>
+</html>
